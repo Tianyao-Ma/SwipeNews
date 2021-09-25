@@ -8,7 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tianyaoma.myapplication.R;
+import com.tianyaoma.tinnews.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
