@@ -2,13 +2,19 @@ package com.tianyaoma.tinnews.ui.search;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.tianyaoma.tinnews.R;
+import com.tianyaoma.tinnews.repository.NewsRepository;
+import com.tianyaoma.tinnews.repository.NewsViewModelFactory;
 
 
 /**
@@ -17,6 +23,7 @@ import com.tianyaoma.tinnews.R;
  * create an instance of this fragment.
  */
 public class SearchFragment extends Fragment {
+    private SearchViewModel viewModel;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,6 +63,24 @@ public class SearchFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        NewsRepository repository = new NewsRepository(getContext());
+        viewModel = new ViewModelProvider(this, new NewsViewModelFactory(repository))
+                .get(SearchViewModel.class);
+        viewModel.setSearchInput("Covid-19");
+        viewModel
+                .searchNews()
+                .observe(
+                        getViewLifecycleOwner(),
+                        newsResponse -> {
+                            if (newsResponse != null) {
+                                Log.d("SearchFragment", newsResponse.toString());
+                            }
+                        });
     }
 
     @Override
