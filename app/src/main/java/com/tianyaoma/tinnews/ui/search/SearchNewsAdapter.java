@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
 import com.tianyaoma.tinnews.R;
 import com.tianyaoma.tinnews.databinding.SearchNewsItemBinding;
 import com.tianyaoma.tinnews.model.Article;
@@ -28,6 +29,7 @@ public class SearchNewsAdapter extends
         notifyDataSetChanged();
     }
 
+    // 2. Adapter overrides:
     // providing the generated item views;
     @NonNull
     @Override
@@ -36,14 +38,13 @@ public class SearchNewsAdapter extends
         return new SearchNewsViewHolder(view);
     }
 
-
     // binding data with a view;
     @Override
     public void onBindViewHolder(@NonNull SearchNewsAdapter.SearchNewsViewHolder holder, int position) {
         Article article = articles.get(position);
         holder.favoriteImageView.setImageResource(R.drawable.ic_favorite_24dp);
         holder.itemTitleTextView.setText(article.title);
-
+        Picasso.get().load(article.urlToImage).into(holder.itemImageView);
     }
 
     // for count the current data collection size;
@@ -51,9 +52,6 @@ public class SearchNewsAdapter extends
     public int getItemCount() {
         return articles.size();
     }
-
-    // 2. Adapter overrides:
-    // TODO
 
     // 3. SearchNewsViewHolder:
     public static class SearchNewsViewHolder extends RecyclerView.ViewHolder {
