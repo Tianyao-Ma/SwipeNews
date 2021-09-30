@@ -25,12 +25,7 @@ import com.yuyakaido.android.cardstackview.SwipeAnimationSetting;
 
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class HomeFragment extends Fragment implements CardStackListener {
+class HomeFragment extends Fragment implements CardStackListener {
     private HomeViewModel viewModel;
     private FragmentHomeBinding binding;
     private CardStackLayoutManager layoutManager;
