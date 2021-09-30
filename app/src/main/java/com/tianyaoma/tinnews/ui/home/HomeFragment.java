@@ -13,28 +13,27 @@ import android.view.ViewGroup;
 
 import com.tianyaoma.tinnews.R;
 import com.tianyaoma.tinnews.databinding.FragmentHomeBinding;
+import com.tianyaoma.tinnews.model.Article;
 import com.tianyaoma.tinnews.repository.NewsRepository;
 import com.tianyaoma.tinnews.repository.NewsViewModelFactory;
+import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
+import com.yuyakaido.android.cardstackview.CardStackListener;
+import com.yuyakaido.android.cardstackview.StackFrom;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements CardStackListener {
     private HomeViewModel viewModel;
     private FragmentHomeBinding binding;
+    private CardStackLayoutManager layoutManager;
+    private List<Article> articles;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeFragment() {
+ public HomeFragment() {
         // Required empty public constructor
     }
 
@@ -68,6 +67,13 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @NonNull Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        // Setup CardStackView
+        CardSwipeAdapter swipeAdapter = new CardSwipeAdapter();
+        layoutManager = new CardStackLayoutManager(requireContext());
+        layoutManager.setStackFrom(StackFrom.Top);
+        binding.homeCardStackView.setLayoutManager(layoutManager);
+        binding.homeCardStackView.setAdapter(swipeAdapter);
+
         NewsRepository repository = new NewsRepository(getContext());
         viewModel = new ViewModelProvider(this, new
                 NewsViewModelFactory(repository)).get(HomeViewModel.class);
@@ -77,7 +83,8 @@ public class HomeFragment extends Fragment {
                         getViewLifecycleOwner(),
                         newsResponse -> {
                             if (newsResponse != null) {
-                                Log.d("HomeFragment", newsResponse.toString());
+                                articles = newsResponse.articles;
+                                swipeAdapter.setArticles(articles);
                             }
                         }
                 );
