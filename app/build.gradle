@@ -1,5 +1,7 @@
+apply plugin: "androidx.navigation.safeargs"
 plugins {
     id 'com.android.application'
+
 }
 
 android {

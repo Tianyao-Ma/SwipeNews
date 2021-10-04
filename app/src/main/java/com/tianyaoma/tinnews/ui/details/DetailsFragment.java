@@ -11,11 +11,7 @@ import android.view.ViewGroup;
 import com.tianyaoma.tinnews.R;
 import com.tianyaoma.tinnews.databinding.FragmentDetailsBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DetailsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class DetailsFragment extends Fragment {
 
 
