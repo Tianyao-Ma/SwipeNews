@@ -1,12 +1,11 @@
 # AroundMe
 
 <p align="center">
-<img src="https://img.shields.io/badge/Backend-%20GO%20-F6922B.svg">
-<img src="https://img.shields.io/badge/Frontend-%20 React | AntDesign%20-43dcf2.svg">
-<img src="https://img.shields.io/badge/Framework- Go %20-ec63a8.svg">
-<img src="https://img.shields.io/badge/Database-%20 ElasticSearch | GCS %20-3de540.svg">
-<img src="https://img.shields.io/badge/Deployment-%20GCE%20-DDC7FC.svg">
-<img src="https://img.shields.io/badge/Platform-%20Fullstack Web%20-F6F063.svg">
+<img src="https://img.shields.io/badge/Backend-%20Java%20-F6922B.svg">
+<img src="https://img.shields.io/badge/Frontend-%20Java%20-43dcf2.svg">
+<img src="https://img.shields.io/badge/Framework- MVVM %20-ec63a8.svg">
+<img src="https://img.shields.io/badge/Database-%20 RoomDB %20-3de540.svg">
+<img src="https://img.shields.io/badge/Platform-%20Android App%20-F6F063.svg">
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
@@ -20,24 +19,22 @@
 
 ## :film_strip: Project Demo
 <p align="center">
-<img src="https://user-images.githubusercontent.com/78308927/134451070-bb7b60f2-76b5-4b5e-a269-b154f9cefa72.gif" height="800"/>
+<img src="https://user-images.githubusercontent.com/78308927/134451070-bb7b60f2-76b5-4b5e-a269-b154f9cefa72.gif" height="600"/>
 </p>
 
 ## 🤖 Tech Stack
 
-* Go
-* React Js
-* Ant Design 3
-* ElasticSearch 
-* Google Cloud Storage
-* Google App Engine
-* JSON Web Tokens
-
+* Java
+* Android JetPack 
+* RoomDB
+* Retrofit
+* Android Studio
+* Google Component Architectural MVVM Pattern
 
 ## 📐 Design Doc
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/78308927/136308686-f0d075e4-dde6-4781-8dc9-0f7eeef33315.jpg">
+<img src="https://user-images.githubusercontent.com/78308927/136308686-f0d075e4-dde6-4781-8dc9-0f7eeef33315.jpg" height="700">
 </p>
 
 ## :fire: Key Features
