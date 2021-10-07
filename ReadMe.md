@@ -46,10 +46,10 @@
   For those of you not familiar with Pacman, it's a game where Pacman (the yellow circle with a mouth in the above figure) moves around in a maze and tries to eat as many food pellets (the small white dots) as possible, while avoiding the ghosts (the other two agents with eyes in the above figure). If Pacman eats all the food in a maze, it wins.
 </p>
 
-- **Scalable web service in Go to handle user posts**.
-- **Users can browse and search recent posts throw two method: byUserName and byKeyword.** [[Search Method]](#search-method)
-- **Supports user to create/upload personal posts in various media format**.
-- **Optimized media post layout by using [react-grid-gallery](https://github.com/benhowell/react-grid-gallery), which seamlessly adjust posts size with different browser window**.[[PhotoGallery Componenet]](#react-library)
-- **Integrated database & media storage design with Elastic Search and GSC**. [[GCS]](#gcs)
-- **Improvement on authentication using token-based registration/login/logout flow with React Router v4 and server-side user authentication with JWT**. [[JWT Auth]](#jwt-auth)
+
+- **Achieved Google Component Architectural MVVM Pattern using one single activity with multiple fragments**.
+- **Implemented the bottom view & page navigation using JetPack navigation component** [[Search Method]](#search-method)
+- **Utilized 3rd party CardStackView(RecyclerView) to support Tinder-like swipe gestures for likes/dislikes**.
+- **Built the Room Database with LiveData & ViewModel to support local cache and offline model**.[[PhotoGallery Componenet]](#react-library)
+- **Integrated Retrofit and LiveData to pull the latest news data from a RESTFUL endpoint (newsapi.org)C**. [[GCS]](#gcs)
 
