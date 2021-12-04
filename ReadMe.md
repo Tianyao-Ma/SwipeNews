@@ -46,8 +46,9 @@ Inspired by Tinder, this android APP provides a clean and interactive UI that wi
 
 
 - **Achieved Google Component Architectural MVVM Pattern using one single activity with multiple fragments**.
-- **Implemented the bottom view & page navigation using JetPack navigation component** [[Search Method]](#search-method)
+- **Implemented the bottom view & page navigation using JetPack navigation component** 
 - **Utilized 3rd party CardStackView(RecyclerView) to support Tinder-like swipe gestures for likes/dislikes**.
-- **Built the Room Database with LiveData & ViewModel to support local cache and offline model**.[[PhotoGallery Componenet]](#react-library)
-- **Integrated Retrofit and LiveData to pull the latest news data from a RESTFUL endpoint (newsapi.org)**. [[GCS]](#gcs)
+- **Built the Room Database with LiveData & ViewModel to support local cache and offline model**.
+- **Integrated Retrofit and LiveData to pull the latest news data from a RESTFUL endpoint (newsapi.org)**.
+
 
