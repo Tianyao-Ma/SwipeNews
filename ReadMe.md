@@ -1,4 +1,4 @@
-# TinNews
+# SwipeNews
 
 <p align="center">
 <img src="https://img.shields.io/badge/Backend-%20Java%20-F6922B.svg">
