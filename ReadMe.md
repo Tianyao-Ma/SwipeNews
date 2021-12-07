@@ -12,9 +12,9 @@
 
 ## 🎬 About the project
 
-  According to a recent research conducted by [*the Atlantic*](https://www.theatlantic.com/technology/archive/2016/05/how-many-stories-do-newspapers-publish-per-day/483845/), the *Times* publishes about 230 pieces of content—stories, graphics, interactives, and blog posts—**daily**. As a reader, I often feel overwhelmed by the amount of notications sent by the news app per day, and easily get interrupted or distracted by the pop-out ads when I try to read the articles. How can we take more control over what we want to read? How can we make news reading experience more curated and personal? 
+  According to recent research conducted by [*the Atlantic*](https://www.theatlantic.com/technology/archive/2016/05/how-many-stories-do-newspapers-publish-per-day/483845/), the Times publishes about 230 pieces of content—stories, graphics, interactives, and blog posts—daily. As a reader, I often feel overwhelmed by the number of notifications sent by the news app per day, and easily get interrupted or distracted by the pop-out ads when I try to read the articles. How can we take more control over what we want to read? How can we make the news reading experience more curated and personal?
   
-Inspired by Tinder, this android APP provides a clean and interactive UI that with each launch, it will retrieve 20 latest global news using News API, displayed as cardStackView with headline and image, to allow users to swipe left and right to discard or save news for later read. The app also supports users to search news by keyword and create their favorite news lists for future review. 
+Inspired by Tinder, this android APP provides a clean and interactive UI that with each launch, it will retrieve 20 latest global news using News API, displayed as cardStackView with headline and image, to allow users to swipe left and right to discard or save the news for later reading. The app also supports users to search news by keyword and create their favorite news lists for future review. 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
